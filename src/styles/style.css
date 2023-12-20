@@ -64,6 +64,66 @@ body {
   text-decoration: underline solid #fff;
 }
 
+/* Бургер меню  */
+
+.menu-burger__header {
+  position: relative;
+  /* display: none; */
+  width: 40px;
+  height: 35px;
+  z-index: 1;
+
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-burger__header span,
+.menu-burger__header::after,
+.menu-burger__header::before {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  margin: 0 auto;
+}
+
+.menu-burger__header span {
+  top: 16px;
+}
+
+.menu-burger__header:after,
+.menu-burger__header:before {
+  content: "";
+}
+
+.menu-burger__header:after {
+  bottom: 5px;
+}
+
+.menu-burger__header:before {
+  top: 5px;
+}
+
+.menu-burger__header.open-menu span {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-burger__header.open-menu::before {
+  transform: rotate(35deg);
+  top: 16px;
+  transition: 0.4s;
+}
+
+.menu-burger__header.open-menu::after {
+  transform: rotate(-38deg);
+  bottom: 16px;
+  transition: 0.4s;
+}
+
 /* Интро  */
 
 .intro {
@@ -271,8 +331,6 @@ body {
 }
 
 .skill__technolog {
-
-
   font-size: 30px;
   font-weight: bold;
   color: rgb(69, 159, 255);
@@ -623,7 +681,7 @@ textarea {
   }
 
   /* Достижения  */
-/* ssdsd */
+  /* ssdsd */
   .successes__title {
     font-size: 35px;
   }
@@ -643,7 +701,6 @@ textarea {
   .experience__text {
     margin-left: 40px;
   }
-
 }
 
 @media (max-width: 550px) {
@@ -681,7 +738,7 @@ textarea {
 
   /* Навыки */
 
-  .skills__inner{
+  .skills__inner {
     flex-direction: column;
   }
 
