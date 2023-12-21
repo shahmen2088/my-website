@@ -37,7 +37,7 @@ body {
 
 .header__inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   padding: 20px 0px;
@@ -68,8 +68,9 @@ body {
 
 .menu-burger__header {
   position: relative;
-  /* display: none; */
+  display: none;
   width: 40px;
+  right: 50px;
   height: 35px;
   z-index: 1;
 
@@ -636,8 +637,39 @@ textarea {
 
   /* Навигация  */
 
-  .nav {
+  .header__inner .nav {
     display: none;
+  }
+
+  .popup {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 300px;
+    height: 340px;
+    background-color: #333;
+    /* z-index: 100; */
+    display: flex;
+    transition: 0.3s;
+  }
+
+  .popup.open {
+    top: 70px;
+  }
+
+  .nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+  }
+
+  .popup .menu > a {
+    width: 100%;
   }
 
   /* Биография  */
@@ -688,6 +720,16 @@ textarea {
 
   .contact__title {
     font-size: 35px;
+  }
+
+  /* Меню */
+
+  .menu-burger__header {
+    display: block;
+  }
+
+  .menu-burger__header.open-menu .nav {
+    display: block;
   }
 }
 
