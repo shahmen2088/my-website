@@ -24,7 +24,12 @@ body {
 /* Header  */
 
 .header {
-  position: fixed;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 75px;
   width: 100%;
   top: 0;
   left: 0;
@@ -39,8 +44,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 20px 0px;
 }
 
 .header__logo i {
@@ -48,10 +51,18 @@ body {
   color: rgb(227, 184, 115);
 }
 
-/* Навигация */
+.popup {
+  display: none;
+}
 
-/* .nav {
-} */
+.header.active {
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+}
+
+/* Навигация */
 
 .nav__item {
   font-size: 18px;
@@ -60,16 +71,12 @@ body {
   padding: 10px 10px;
 }
 
-.nav__item:hover {
-  text-decoration: underline solid #fff;
-}
-
 /* Бургер меню  */
 
 .menu-burger__header {
   position: relative;
   display: none;
-  width: 40px;
+  width: 60px;
   right: 50px;
   height: 35px;
   z-index: 1;
@@ -85,7 +92,8 @@ body {
 .menu-burger__header::after,
 .menu-burger__header::before {
   height: 3px;
-  width: 100%;
+  left: 10px;
+  width: 50px;
   position: absolute;
   background: #fff;
   margin: 0 auto;
@@ -630,46 +638,30 @@ textarea {
 }
 
 @media (max-width: 990px) {
-  /* Шапка  */
-
-  .header__inner {
-  }
-
   /* Навигация  */
 
-  .header__inner .nav {
-    display: none;
-  }
-
-  .popup {
-    position: fixed;
-    top: -100%;
+  .nav {
+    position: absolute;
+    width: 260px;
     right: 0;
-    width: 300px;
-    height: 340px;
+    top: -290px;
     background-color: #333;
-    /* z-index: 100; */
-    display: flex;
+    padding: 90px 20px 20px 20px;
     transition: 0.3s;
   }
 
-  .popup.open {
-    top: 70px;
+  .nav__item {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
   }
 
-  .nav {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 50px 0;
-    overflow: auto;
+  .header.open .nav {
+    top: 0;
   }
 
-  .popup .menu > a {
-    width: 100%;
+  .header.open .nav__item {
+    border-bottom: 2px solid #fff;
   }
 
   /* Биография  */
