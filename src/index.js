@@ -1,3 +1,6 @@
+import reset from './styles/reset.css';
+import css from './styles/main.scss';
+
 // Бургер меню
 
 const menu = document.querySelector("#menu");
