@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- Скрипты -->
     <script
@@ -14,32 +14,32 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
           <div class="header__logo">
             <a href="#"> <i class="fa-solid fa-mug-saucer"></i></a>
           </div>
           <nav class="nav">
-            <a class="nav__item" href="#">ABOUT ME</a>
-            <a class="nav__item" href="#">EDUCATION </a>
-            <a class="nav__item" href="#">ACHIEVEMENTS</a>
-            <a class="nav__item" href="#">PROJECTS</a>
-            <a class="nav__item" href="#">CONTACT</a>
+            <a class="nav__item" href="#about">ABOUT ME</a>
+            <a class="nav__item" href="#education">EDUCATION </a>
+            <a class="nav__item" href="#achievements">ACHIEVEMENTS</a>
+            <a class="nav__item" href="#projects">PROJECTS</a>
+            <a class="nav__item" href="#contact">CONTACT</a>
           </nav>
 
-          <button class="menu-burger__header">
+          <button class="menu-burger__header" id="menu">
             <span>Menu</span>
           </button>
         </div>
       </div>
     </header>
 
-    <div class="intro">
+    <div class="intro" id="intro">
       <div class="container">
         <div class="intro__inner">
           <div class="intro__photo">
-            <img src="./styles/images/avatar.jpg" alt="MyPhoto" />
+            <img src="/src/images/avatar.jpg" alt="MyPhoto" />
           </div>
           <div intro__title>
             <h2 class="intro__name">Buronov Shokhrukh</h2>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="biography">
+    <div class="biography" id="about">
       <div class="container">
         <div class="biography__inner">
           <div class="biography__title">
@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <div class="experience">
+    <div class="experience" id="education">
       <div class="container">
         <div class="experience__inner">
           <div class="experience__title">EDUCATION & CAREER</div>
@@ -142,7 +142,7 @@
       </div>
     </div>
 
-    <div class="successes">
+    <div class="successes" id="achievements">
       <div class="container">
         <h1 class="successes__title">ACHIEVEMENTS</h1>
         <hr class="space" />
@@ -216,7 +216,7 @@
       </div>
     </div>
 
-    <div class="gallery">
+    <div class="gallery" id="projects">
       <div class="container">
         <h1 class="gallery__title">PROJECTS</h1>
         <hr class="space" />
@@ -274,7 +274,7 @@
       </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="container">
         <h1 class="contact__title">CONTACT</h1>
         <hr class="space" />
@@ -328,6 +328,6 @@
         </div>
       </div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
